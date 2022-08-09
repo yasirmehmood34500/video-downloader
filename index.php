@@ -9,17 +9,19 @@ if (isset($_GET['download'])) {
 <head>
     <?php include "./links/mete.php" ?>
     <style type="text/css">
-        .spinner-border{
-            display: none;
-            margin-left: 47%;
-        }
-        .audio_list{
-            display: none;
-        }
-        #resultBlock{
-            display: none;
-        }
-        </style>
+    .spinner-border {
+        display: none;
+        margin-left: 47%;
+    }
+
+    .audio_list {
+        display: none;
+    }
+
+    #resultBlock {
+        display: none;
+    }
+    </style>
 
 
 </head>
@@ -46,12 +48,12 @@ if (isset($_GET['download'])) {
 
 
                         <!-- <form id="form"> -->
-                            <div class="input-group">
-                                <input type="text" name="d_url" required class="form-control rounded mx-auto mt-3"
-                                    placeholder="Paste The Link Here" id="url" autofocus="" aria-label="Search"
-                                    aria-describedby="search-addon" />
-                                <button type="" id="getVideo" class="btn btn-success mt-3">Search </button>
-                            </div>
+                        <div class="input-group">
+                            <input type="text" name="d_url" required class="form-control rounded mx-auto mt-3"
+                                placeholder="Paste The Link Here" id="url" autofocus="" aria-label="Search"
+                                aria-describedby="search-addon" />
+                            <button type="" id="getVideo" class="btn btn-success mt-3">Search </button>
+                        </div>
                         <!-- </form> -->
 
                         <p class="pp">By using our service you accept our <strong> Terms of Service </strong> and
@@ -120,9 +122,11 @@ if (isset($_GET['download'])) {
                                 <table class="table border border-dark  rounded-1">
                                     <thead class=py-2>
                                         <tr>
-                                            <th scope="col"><button class="btn btn-primary w-100 video_list_btn">Video</button></th>
+                                            <th scope="col"><button
+                                                    class="btn btn-primary w-100 video_list_btn">Video</button></th>
                                             <th></th>
-                                            <th scope="col"><button class="btn btn-primary w-100 audio_list_btn">Audio</button></th>
+                                            <th scope="col"><button
+                                                    class="btn btn-primary w-100 audio_list_btn">Audio</button></th>
 
                                         </tr>
                                     </thead>
@@ -173,7 +177,7 @@ if (isset($_GET['download'])) {
 
 
 
-   
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -183,7 +187,7 @@ if (isset($_GET['download'])) {
         $(".video_list_btn").click(function() {
             $(".audio_list").hide();
             $(".video_list").show();
-           
+
         });
         $(".audio_list_btn").click(function() {
             $(".video_list").hide();
@@ -191,13 +195,16 @@ if (isset($_GET['download'])) {
         });
         $("#getVideo").click(function() {
             $(".spinner-border").show();
-            var url=$("#url").val();
-            if (url.length>0) {
+            var url = $("#url").val();
+            if (url.length > 0) {
                 $.ajax({
                     url: 'api_get.php',
                     method: 'POST',
-                    data: {get_video_detail:'yes',url: url},
-                    success: function(data){
+                    data: {
+                        get_video_detail: 'yes',
+                        url: url
+                    },
+                    success: function(data) {
                         $("#resultBlock").show();
                         $(".spinner-border").hide();
                         $("#data_res").html(data);
@@ -207,7 +214,7 @@ if (isset($_GET['download'])) {
                 $(".spinner-border").hide();
                 $("#url").focus();
             }
-            
+
         });
     });
     </script>
