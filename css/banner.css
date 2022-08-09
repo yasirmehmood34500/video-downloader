@@ -1,0 +1,21 @@
+.container .row .banner{
+    margin: 4px 3px;
+    padding: 3px 4px;
+    text-align: center;
+    justify-content: center;
+}
+.container .row .banner h5{
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.container .row .banner p{
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0px 2px;
+    padding: 2px ;
+    color: rgb(68, 64, 64);
+}
+

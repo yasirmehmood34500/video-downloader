@@ -1,0 +1,106 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow-x: none;
+}
+.navbar {
+  background-color: #06159c;
+}
+
+.bodysection {
+  background-color: #072375;
+  width: 100% cover;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.heading {
+  margin: 10% 0% 6% 0%;
+  padding: 10px 5px;
+}
+.heading h1 {
+  color: white;
+  text-transform: capitalize;
+  padding: 5px;
+  margin: 20% 0% 0% 0%;
+}
+.heading h6 {
+  color: white;
+  text-transform: capitalize;
+  padding: 5px;
+  margin: 2% auto;
+}
+
+.heading p > strong {
+  color: red;
+}
+
+.bodysection .input-group {
+  margin: 10px auto;
+}
+
+.row .heading .pp {
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .heading {
+    margin: 30% 0% 2% 0%;
+    padding: 5px 5px;
+  }
+  .heading h1 {
+    color: white;
+    text-transform: capitalize;
+    padding: 5px;
+    margin: 20% 0% 0% 3%;
+  }
+  .heading h6 {
+    color: white;
+    text-transform: capitalize;
+    padding: 5px;
+    margin: 4% auto 4% auto;
+  }
+  .row .heading .pp {
+    color: white;
+    margin: 6% auto;
+    padding: 4px 3px;
+    text-align: center;
+  }
+  .heading p > strong {
+    color: red;
+  }
+}
+
+
+
+@media only screen and (max-width: 300px) {
+    .heading {
+      margin: 30% 0% 2% 0%;
+      padding: 5px 5px;
+    }
+    .heading h1 {
+      color: white;
+      text-transform: capitalize;
+      padding: px;
+      margin: 20% 0% 0% 0%;
+    }
+    .heading h6 {
+      color: white;
+      text-transform: capitalize;
+      padding: 0px;
+      margin: 4% auto 4% auto;
+    }
+    .row .heading .pp {
+      color: white;
+      margin: 6% auto;
+      padding: 4px 3px;
+      text-align: center;
+    }
+    .heading p > strong {
+      color: red;
+    }
+  }
+  

@@ -1,0 +1,91 @@
+.Navbar {
+  background-color: #06159c;
+  width: 100% cover;
+}
+
+.navbar-brand {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  white-space: nowrap;
+  color: crimson;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.navbar-toggler-icon .fa-bars {
+  color: white;
+  font-size: 30px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 12px;
+  padding-left: 5px;
+}
+.navbar .container-fluid a:hover {
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-item a {
+  margin-left: 12px;
+  padding-left: 5px;
+  color: white;
+  font-weight: 500;
+}
+.navbar-nav .nav-item a:hover {
+  color: crimson;
+  transition: 0.2 s;
+}
+
+@media only screen and (max-width: 700px) {
+  .navbar-nav .nav-item a {
+    margin-left: 0px;
+    padding-left: 0px;
+    color: white;
+    font-weight: normal;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    color: white;
+    width: 100% cover;
+    background-color: #06159c;
+    z-index: 1000;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .navbar-nav .nav-item a {
+    margin-left: 0px;
+    padding-left: 0px;
+    color: crimson;
+    font-weight: 600;
+  }
+  .navbar-nav .nav-item a:hover {
+    margin-left: 0px;
+    padding-left: 0px;
+    color: crimson;
+    font-weight: 600;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    color: white;
+    width: 100% cover;
+    background-color: #06159c;
+    z-index: 1000;
+  }
+}
