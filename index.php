@@ -1,6 +1,17 @@
 <?php 
-   if (isset($_GET['download'])) {
-       move_uploaded_file($_GET['download'], "video.mp4");
+   // if (isset($_GET['download'])) {
+   //     move_uploaded_file($_GET['download'], "video.mp4");
+   // }
+   if (isset($_POST['download_btn'])) {
+      $url=$_POST['url'];
+      $mime = 'application/video';
+        header('Content-Type: '.$mime);
+        header('Content-Description: File Transfer');
+        header('Content-Disposition: attachment; filename=video_download.mp4');
+        header('Content-Transfer-Encoding: binary');
+        header('Expires: 0');
+        readfile($url);
+        exit;
    }
    ?>
 <!DOCTYPE html>
@@ -103,26 +114,25 @@
                      $("#url").focus();
                  }
              });
-             $(document).on('click', '.download_video', function() {
-                 var g_url = $("#g_url").val();
-                 var itag = $(this).attr('data-itag');
-                 var id = $(this).attr('id');
-                 $(this).removeClass('btn-success');
-                 $(this).html('<img src="img/loader.gif" style="width: 25px; height: 25px;">');
-                 $.ajax({
-                     url: 'ajax/api_get.php',
-                     method: 'POST',
-                     data: {
-                         itag: itag,
-                         g_url: g_url
-                     },
-                     success: function(data) {
-                         $(".download_video").addClass('btn-success');
-                         $(".download_video").html('Download');
-                         console.log(data);
-                     }
-                 });
-             });
+            //  $(document).on('click', '.download_video', function() {
+            //      var g_url = $("#g_url").val();
+            //      var itag = $(this).attr('data-itag');
+            //      var id = $(this).attr('id');
+            //      $(this).removeClass('btn-success');
+            //      $(this).html('<img src="img/loader.gif" style="width: 25px; height: 25px;">');
+            //      $.ajax({
+            //          url: 'ajax/api_get.php',
+            //          method: 'POST',
+            //          data: {
+            //              itag: itag,
+            //              g_url: g_url
+            //          },
+            //          success: function(data) {
+            //              $(".download_video").addClass('btn-success');
+            //              $(".download_video").html('Download');
+            //          }
+            //      });
+            //  });
          });
       </script>
    </body>
